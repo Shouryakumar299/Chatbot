@@ -6,7 +6,7 @@ class AIApp(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("Gemini Style GUI (Preview)")
+        self.title("jade")
         self.geometry("900x600")
         self.configure(fg_color="black")  # Full black background
 
@@ -24,19 +24,19 @@ class AIApp(ctk.CTk):
         # ========== GREETING TEXT ==========
         greeting = ctk.CTkLabel(
             center_frame,
-            text="Hi Shourya",
+            text="Hi User",
             font=("Segoe UI", 36, "bold"),
             text_color="white"
         )
         greeting.pack(pady=(0, 40))
 
-        # ========== SEARCH BOX (Gemini Style) ==========
+        # ========== SEARCH BOX ==========
         search_frame = ctk.CTkFrame(
             center_frame,
             width=700,
             height=90,
             fg_color="#1F1F1F",
-            corner_radius=40   # Gemini-style roundness
+            corner_radius=40   
         )
         search_frame.pack()
 
@@ -60,27 +60,6 @@ class AIApp(ctk.CTk):
         row_spacer = ctk.CTkLabel(row, text="", fg_color="transparent")
         row_spacer.pack(side="left", expand=True)
 
-        # “Fast ▼” placeholder
-        mode_label = ctk.CTkLabel(
-            row,
-            text="Fast ▼",
-            font=("Segoe UI", 16),
-            text_color="#C8C8C8"
-        )
-        mode_label.pack(side="left", padx=15)
-
-        # Microphone placeholder icon
-        mic_button = ctk.CTkButton(
-            row,
-            width=40,
-            height=40,
-            text="🎤",
-            font=("Segoe UI", 20),
-            fg_color="transparent",
-            hover_color="#333333",
-            corner_radius=20
-        )
-        mic_button.pack(side="left")
 
 
 
